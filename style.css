@@ -9,9 +9,9 @@ table, th, td {
   height: 400px;
 }
 button:hover {
-  background-color: white;
+  background-color: #ffe100;
   color: black;
-  //border-color: black;
+  border-color: black;
 }
 #tableScroll {
   height:500px;

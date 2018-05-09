@@ -16,11 +16,11 @@
                 <tr>
                 </tr>
                 <tr>
-                  <thead>
+                  <!--<thead>-->
                     <th>Borough</th>
-                    <th>District</th>
+                    <th>Neighborhood</th>
                     <!--<th>Lat/Lng</th>-->
-                  </thead>
+                  <!--</thead>-->
                 </tr>
                 <tbody id="tableContent">
                 </tbody>
@@ -31,13 +31,20 @@
         <div class="col-md-6" id="googleMapDisplay"></div>
       </div>
       <div class="row">
-         <div class="col-md-2">
-          <button id="getDataButton">Get Data</button>
-        </div>
-        <div class="col-md-4">
-          <button id="updateTableButton">Update Table</button>
-        </div>
-      </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <button id="getDataButton">Get Data</button>
+                        </div>
+                        <div class="col-md-6">
+                            <button id="updateTableButton">Update Table</button>
+                        </div>
+                    </div>
+                </div>
+            <div class="col-md-6">
+                    <button id="displayDistrictButton">Display Districts</button>
+                </div>
+          </div>
     </div>
       <!-- Jquery -->
     <script
@@ -50,7 +57,6 @@
     <script type="text/javascript" src="index.js"></script>
       <!-- Google Maps -->
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtwtotPF4yTeXqms_1GQp8FJUyaPzWNsw&callback=onGoogleMapResponse">
-    </script>
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtwtotPF4yTeXqms_1GQp8FJUyaPzWNsw&callback=onGoogleMapResponse"> </script>
   </body>
 </html>

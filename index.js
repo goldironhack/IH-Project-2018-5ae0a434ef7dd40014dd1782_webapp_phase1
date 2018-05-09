@@ -20,16 +20,16 @@ function updateTable(){
 
 function callData(){
   $.getJSON(urlGIS, function(dataOriginal){
-    console.log(dataOriginal);;
+    console.log(dataOriginal);
   })
   $.getJSON(urlGeo, function(dataOriginal){
-    console.log(dataOriginal);;
+    console.log(dataOriginal);
   })
   $.getJSON(urlCrimes, function(dataOriginal){
-    console.log(dataOriginal);;
+    console.log(dataOriginal);
   })
   $.getJSON(urlHouse, function(dataOriginal){
-    console.log(dataOriginal);;
+    console.log(dataOriginal);
   })
 }
 
@@ -41,12 +41,16 @@ $(document).ready(function(){
   $("#getDataButton").on("click", callData);
 })
 
-<!-- Google Maps -->
+$(document).ready(function(){
+  $("#displayDistrictButton").on("click", districtBorder);
+})
 
+
+//<!-- Google Maps -->
 function onGoogleMapResponse(){
   var NYUStern = {lat: 40.7291, lng: -73.9965};
   map = new google.maps.Map(document.getElementById('googleMapDisplay'), {
-    zoom: 17,
+    zoom: 12,
     center: NYUStern
   });
 
@@ -58,7 +62,17 @@ addMarker(NYUStern);
       map: map
     });
   }
+  
 }
+
+function districtBorder(){
+        map.setZoom(10);
+        map.data.loadGeoJson(urlGeo);
+        map.data.setStyle({
+        fillColor: 'orange',
+        strokeWeight: 1.5
+    });
+  }
 
 
 
